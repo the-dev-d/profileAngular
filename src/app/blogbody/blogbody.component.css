@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:wght@200&family=Quicksand&display=swap');
+.posts {
+  padding: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.478);
+  border-radius: 10px;
+  margin: 1rem 2rem;
+  background-color: #22225496;;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  transition: background 500ms ease-in;
+}
+.posts:hover {
+  background:linear-gradient(0deg,rgba(2, 38, 167, 0.187),rgba(255, 255, 255, 0.178));
+}

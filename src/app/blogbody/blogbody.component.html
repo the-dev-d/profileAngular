@@ -1,0 +1,14 @@
+<div *ngIf="error; else posts">
+  <h4 class="error"> {{error}} </h4>
+</div>
+<ng-template #posts>
+  <div *ngIf="!blogdata;" id="load">
+    Loading
+  </div>
+  <div *ngFor="let post of blogdata" class="posts">
+    <h2> {{post.title}} </h2> <h6>{{post.posted}}</h6>
+    <p>
+      {{post.post}}
+    </p>
+  </div>
+</ng-template>
