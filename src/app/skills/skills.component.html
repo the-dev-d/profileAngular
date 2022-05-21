@@ -1,0 +1,12 @@
+<section id="skills" class="tile grid grid-center">
+  <h2 style="margin-bottom:2rem">Programming Languages</h2>
+  <div class="grid-flex skillwrapper" style="height:fit-content;width:100%;flex-wrap:wrap;">
+
+    <div *ngFor="let item of skillset" class="card grid grid-center" style="height:100%;line-height:2.5;align-content:start">
+      <h3 class='flex flex-center' style="line-height:1" > {{item.title}} </h3>
+      <p style="line-height:1.5;margin:2rem 1rem 2rem 1rem;font-size:small;text-align:center"> {{item.desc}} </p>
+              <h4 *ngFor="let skill of item.langs " class='grid grid-center' style="margin:0.5rem 0rem 0.5rem 0rem"> <i class="x2 {{skill.icon}} " style="font-size:200%" ></i> {{skill.name}} </h4>
+      <div style="height:1rem"></div>
+    </div>
+  </div>
+</section>

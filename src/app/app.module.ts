@@ -9,6 +9,10 @@ import { QuoteTileComponent } from './quote-tile/quote-tile.component';
 import { ProfileBodyComponent } from './profile-body/profile-body.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FooterComponent } from './footer/footer.component';
+import { FloatNavComponent } from './float-nav/float-nav.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { HeaderComponent } from './header/header.component';
     QuoteTileComponent,
     ProfileBodyComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    FooterComponent,
+    FloatNavComponent
   ],
   imports: [
     BrowserModule,

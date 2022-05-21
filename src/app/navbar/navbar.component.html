@@ -1,4 +1,8 @@
 <nav id="home" class='flex flex-center wrapper' style="justify-content:space-between">
   <h3> DEV-D </h3>
-  <i (click)="popUp('Light Mode Colors are not decided yet, Please wait for some days')" class="fa-solid fa-sun darkmode" > </i>
+  <div class="flex flex-center" style="width: 10%;justify-content: space-between;">
+    <a *ngIf="activeRoute === '/'" routerLink="/blog">Blog</a>
+    <a *ngIf="activeRoute === '/blog'" routerLink="/">Home</a>
+    <i (click)="popUp('Light Mode Colors are not decided yet, Please wait for some days')" class="fa-solid fa-sun darkmode" > </i>
+  </div>
 </nav>

@@ -1,0 +1,41 @@
+:host {
+  display: grid;
+  place-items: center;
+}
+.skillwrapper {
+  grid-template-columns: auto auto auto auto;
+  column-gap: 1%;
+}
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--bg--acc-lt);
+  border: 1px solid var(--bg-acc);
+  transition: 0.3s ease-out;
+  color: white;
+  overflow: hidden;
+}
+.card h3 {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-acc);
+  margin-bottom: 1rem;
+  transition: 0.3s ease-out;
+}
+.card:hover {
+  background-color: var(--bg-acc);
+}
+.card:hover h3{
+  background-color: var(--primary);
+}
+.x2 {
+  transform: scale(1.1);
+}
+
+@media (orientation:portrait) {
+  .card {
+      width: 100%;
+      height: fit-content;
+      margin: 1rem;
+  }
+}

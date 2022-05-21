@@ -1,0 +1,37 @@
+:host{
+  background-color: var(--bg-acc);
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+  padding: 3rem 0rem;
+}
+*{
+  margin: 0.2rem 0rem;
+  color: var(--primary)
+}
+h5{
+  font-weight: normal;
+}
+h4 {
+  color: rgb(202, 212, 248);
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+a{
+  position: relative;
+  text-decoration: none;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width:0%;
+  height: 1px;
+  background:linear-gradient(0deg,var(--border),var(--primary));
+  border-radius: 2px;
+  transition: width 200ms ease-in;
+}
+a:hover::after {
+  width: 100%;
+}

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 interface Posts {
   title:string,
@@ -21,12 +22,11 @@ export class BlogbodyComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.http.get<Posts[]>('http://thedevd.atwebpages.com/')
-    .subscribe({
+    let Observer = (this.http.get<Posts[]>('http://thedevd.atwebpages.com/').subscribe({
       next : (value:Posts[]) => {this.blogdata = value},
       error : (error:any) => {this.error = error.message},
-      complete : () => {console.log("Complete")}
-    }
+      complete : () => {console.log("Complete"); Observer.unsubscribe();console.log("Unsubscription complete")}
+    })
     )
   }
 

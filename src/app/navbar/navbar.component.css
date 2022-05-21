@@ -2,11 +2,32 @@
   display: grid;
   place-items: center;
 }
-
-
 nav{
   padding: 1rem 0rem 1rem 0rem;
   margin: 1rem;
   width: 90%;
   /* border: 1px solid white; */
+}
+a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 200ms ease-in;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width:0%;
+  height: 3px;
+  background:linear-gradient(-90deg,var(--border),var(--primary));
+  border-radius: 2px;
+  transition: width 200ms ease-in;
+}
+a:hover {
+  color: var(--primary);
+}
+a:hover:after {
+  width: 100%;
 }
