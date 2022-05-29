@@ -14,11 +14,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   activeRouteObservable:Subscription;
 
   constructor(private route:Router) {
-    this.activeRouteObservable = this.route.events.subscribe({
+    this.activeRouteObservable = (this.route.events.subscribe({
       next:(event:any) => {if(event instanceof NavigationEnd){this.activeRoute = event.url}},
       error: ()=>{console.log("Unexpected error");this.activeRoute = ''},
       complete: ()=> {}
-    })
+    }))
   }
 
   ngOnInit(): void {
@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.activeRouteObservable.unsubscribe();
+    console.log("Active Link Observable unsubscribed")
   }
 
 }
