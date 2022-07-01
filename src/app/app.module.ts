@@ -13,6 +13,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { FloatNavComponent } from './float-nav/float-nav.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FloatNavComponent } from './float-nav/float-nav.component';
     AboutMeComponent,
     SkillsComponent,
     FooterComponent,
-    FloatNavComponent
+    FloatNavComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

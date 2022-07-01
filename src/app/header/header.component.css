@@ -4,7 +4,7 @@
 }
 
 header {
-  width: 90vw;
+  width: 90%;
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -13,7 +13,7 @@ header {
 .social{
   /* border: 1px solid white; */
   width: 5%;
-  height: 100%;
+  height: 90%;
 }
 .social i {
   margin: 1rem 0rem 1rem 0rem;
@@ -69,12 +69,12 @@ img {
 
   .social {
       width: 100%;
-      height: auto;
+      height: fit-content;
       justify-content: space-around;
   }
   header {
       width: 80%;
-      height: 80vh;
+      height: fit-content;
       grid-template-rows: 10% 70% 10%;
   }
   .text {
@@ -88,8 +88,18 @@ img {
       transform: rotate(0deg);
   }
   .mainface {
-      width: 90vw;
-      height: 100%;
+      width: 100%;
+      height: 85vw
+  }
+  .floater {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  img {
+    width: 95%;
+    height: auto;
+    aspect-ratio: 1;
   }
 
 }

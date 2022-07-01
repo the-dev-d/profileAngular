@@ -40,3 +40,19 @@
   background-color: var(--primary);
   color: var(--bg);
 }
+@media (orientation:portrait) {
+  .grid-flex {
+    display: flex;
+  }
+  .flex-grid {
+    display: grid;
+  }
+  .grid-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-grid-center {
+    align-content: center;
+    justify-items: center;
+  }
+}
