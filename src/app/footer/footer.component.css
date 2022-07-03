@@ -1,4 +1,4 @@
-:host{
+#footer{
   background-color: var(--bg-acc);
   display: grid;
   place-items: center;

@@ -2,5 +2,5 @@
 <app-quote-tile></app-quote-tile>
 <app-about-me #about id="about"></app-about-me>
 <app-skills #skills id="skills"></app-skills>
-<app-footer ></app-footer>
-<app-float-nav *ngIf="!hide" [items]="[header,about,skills]"></app-float-nav>
+<app-footer #footer ></app-footer>
+<app-float-nav *ngIf="!hide" [items]="[header,about,skills,footer]"></app-float-nav>
