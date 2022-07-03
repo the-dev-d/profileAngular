@@ -1,6 +1,6 @@
-<app-header id="home"></app-header>
+<app-header #header id="home"></app-header>
 <app-quote-tile></app-quote-tile>
-<app-about-me id="about"></app-about-me>
-<app-skills id="skills"></app-skills>
-<app-footer></app-footer>
-<app-float-nav></app-float-nav>
+<app-about-me #about id="about"></app-about-me>
+<app-skills #skills id="skills"></app-skills>
+<app-footer ></app-footer>
+<app-float-nav *ngIf="!hide" [items]="[header,about,skills]"></app-float-nav>

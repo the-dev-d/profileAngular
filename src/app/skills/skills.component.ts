@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { Focusable } from '../Utils/Focusable';
 import  {skill} from './skills';
 
 @Component({
@@ -6,16 +7,18 @@ import  {skill} from './skills';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css','../globaltyles.css']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent extends Focusable implements AfterViewInit {
 
   public skillset:any;
 
   constructor() {
+
+    super();
     this.skillset = skill;
     console.log(this.skillset)
    }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
+    this.init("skills");
   }
-
 }

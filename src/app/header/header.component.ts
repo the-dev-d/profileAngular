@@ -1,15 +1,18 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit,OnDestroy,AfterViewInit } from '@angular/core';
+import { Focusable } from '../Utils/Focusable';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css','../globaltyles.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent extends Focusable implements OnInit {
 
   public image:HTMLImageElement|undefined;
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
     let img = new Image();
@@ -20,5 +23,9 @@ export class HeaderComponent implements OnInit {
 
   popUp(msg:string) {
     alert(msg);
+  }
+
+  ngAfterViewInit() {
+    this.init("header");
   }
 }

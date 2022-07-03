@@ -19,7 +19,7 @@
 :host * {
   margin: 0.5rem;
 }
-a{
+.segment-nav{
   color: white;
   transform: scale(1.1);
 }
